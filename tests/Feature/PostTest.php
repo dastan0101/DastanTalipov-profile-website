@@ -33,7 +33,7 @@ class PostTest extends TestCase
     }
 
     public function test_client_response() {
-        $response = $this->get('/client/1000');
-        $response->assertStatus(404);
+        $response = $this->get('/client/1');
+        $response->assertViewHas('client');
     }
 }

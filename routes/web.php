@@ -29,7 +29,7 @@ Route::get('/works', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
-Route::get('post/create', function () {
+Route::get('post/add', function () {
     DB::table('post')->insert([
         'title'=>'Matematika',
         'body'=>'Try Mathematica for free.Trial includes a download of Mathematica, along with access to Mathematica Online.'
@@ -40,3 +40,5 @@ Route::get('blog/index', function () {
     return view('client.create');
 });
 Route::post('blog/create', [BlogController::class,'store'])->name('add-client');
+
+Route::get('blog/{id}', [BlogController::class, 'get_client']);
