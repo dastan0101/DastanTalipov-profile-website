@@ -23,7 +23,7 @@ class BlogController extends Controller
 
 
     public function get_client($id) {
-        $client = Client::find($id);
+        $client = Post::find($id);
 
         if($client == null) 
             return response(['message' => 'client not found'], 404);

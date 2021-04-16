@@ -13,7 +13,7 @@
   <script src="js/scripts.js"></script>
 </head>
 <body>
-  <!-- Navbar -->
+{{$dastan}}
   <nav class="navbar">
     <div class="inner-width">
       <button class="menu-toggler">
@@ -29,7 +29,6 @@
     </div>
   </nav>
 
-  <!-- Home -->
   <section id="home">
     <div class="inner-width">
       <div class="content">
@@ -49,7 +48,6 @@
     </div>
   </section>
 
-  <!-- Home -->
   <section id="about">
     <div class="inner-width">
       <h1 class="section-title">About</h1>
@@ -120,7 +118,6 @@
     </div>
   </section>
 
-  <!-- Services -->
   <section id="services" class="dark">
     <div class="inner-width">
       <h1 class="section-title">Services</h1>
@@ -164,7 +161,6 @@
     </div>
   </section>
 
-  <!-- Education -->
   <section id="education">
     <div class="inner-width">
       <h1 class="section-title">Education & Experiences</h1>
@@ -208,7 +204,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="inner-width">
       <div class="copyright">
@@ -224,7 +219,6 @@
     </div>
   </footer>
 
-  <!-- Go Top BTN -->
   <button class="goTop fas fa-arrow-up"></button>
 
 </body>

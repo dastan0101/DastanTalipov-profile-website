@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Models\Post;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\NewController;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,4 +43,19 @@ Route::get('blog/index', function () {
 });
 Route::post('blog/create', [BlogController::class,'store'])->name('add-client');
 
-Route::get('blog/{id}', [BlogController::class, 'get_client']);
+Route::get('post/{id}', [BlogController::class, 'get_client']);
+
+
+Route::post('blog/creates', [NewController::class, 'store'])->name('add-post');
+ Route::get('blog/gmail', [NewController::class, 'index']);
+
+ Route::get('blog/creates', function(){
+    return view('form');
+});
+
+Route::get('mail',[MailController::class,'send']);
+
+Route::get('example/{lang}',function($lang){
+    App::setlocale($lang);
+    return view('home');
+});
